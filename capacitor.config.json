@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "new-app",
+  "appId": "io.ionic.starter.shivam",
+  "appName": "New App",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",
