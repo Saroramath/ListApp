@@ -1,9 +1,9 @@
-import { IonButton, IonContent, IonFooter, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonFooter, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToggle, IonToolbar } from '@ionic/react';
 import React from 'react';
 import { useLocalStorage } from '../hook';
 import './Home.css';
 import {closeOutline as deleteIcon , checkmarkDoneOutline as doneIcon, logoGithub as gitLogo} from 'ionicons/icons';
-
+import { moon } from "ionicons/icons";
 
 var MainColor = "tertiary";
 var CompletedColor = "success";
@@ -121,10 +121,23 @@ const cleanTask10 = () => {
       setColor10(MainColor);
                     };    
 
-
+const toggleDarkModeHandler = () => {
+      document.body.classList.toggle("dark");
+                    };
   return (
     <IonPage>
       <IonHeader>
+      <IonList className="ion-margin-top">
+          <IonItem>
+            <IonIcon slot="start" icon={moon} />
+            <IonLabel>Dark Mode</IonLabel>
+            <IonToggle
+              slot="end"
+              name="darkMode"
+              onIonChange={toggleDarkModeHandler}
+            />
+          </IonItem>
+        </IonList>
         <IonToolbar>
           <IonTitle className="ion-text-center">List</IonTitle>
         </IonToolbar>
@@ -135,6 +148,12 @@ const cleanTask10 = () => {
             <IonTitle size="large" color="medium" className="ion-text-center"> List </IonTitle>
           </IonToolbar>
         </IonHeader> */}
+        
+
+
+
+
+
         <IonList>
           <IonItem>
            
